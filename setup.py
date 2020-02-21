@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from setuptools import setup, find_packages
+
+setup(
+    name='line_world',
+    version='0.0.1',
+    install_requires=[
+        'gym >= 0.2.3',
+        'numpy',
+        'scipy',
+    ],
+    packages=find_packages(),
+)
