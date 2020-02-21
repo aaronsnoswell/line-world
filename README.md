@@ -5,6 +5,11 @@ A simple multi-modal continuous control RL environment.
 
 ![The LineWorld environment](doc/line_world_env.png)
 
+The green dot is the agent's location and the two peaks show the multi-modal
+reward structure.
+The agent's action space is the range [-1, 1], which moves the agent
+stochastically along the horizontal line.
+
 ## Installation
 
 This package is not distributed on PyPI - you'll have to install from source.
@@ -41,6 +46,7 @@ To train a `stable_baselines` agent,
 import gym
 import line_world
 from stable_baselines import PPO2
+
 agent = PPO2('MlpPolicy', 'LineWorld-v0').learn(10000)
 env = gym.make("LineWorld-v0")
 observation = env.reset()
