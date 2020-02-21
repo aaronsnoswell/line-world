@@ -309,7 +309,7 @@ class LineWorldEnv(gym.Env):
         ))
 
         # Render policy in State-Action space
-        states = np.linspace(-20, 20, 400)
+        states = np.linspace(-10, 10, 400)
         actions = [policy(np.array([s])) for s in states]
         plt.figure()
         plt.plot(states, actions)
@@ -401,8 +401,8 @@ def demo():
 
 if __name__ == '__main__':
     # Train a PPO2 agent
-    stable_baselines_demo()
+    #stable_baselines_demo()
 
     # Visiualize a policy
-    #demo()
+    demo()
 

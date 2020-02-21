@@ -10,6 +10,7 @@ setup(
         'gym >= 0.2.3',
         'numpy',
         'scipy',
+        'matplotlib',
     ],
     packages=find_packages(),
 )
