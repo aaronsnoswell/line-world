@@ -95,6 +95,18 @@ class LineWorldEnv(gym.Env):
             (dict): Extra information dictionary
 
         """
+        
+        # Clamp action to valid range
+        if not self.action_space.contains(action):
+            # warnings.warn("Action ({}) is outside action_space ({})".format(
+            #     action,
+            #     self.action_space
+            # ))
+            action = np.clip(
+                action,
+                self.action_space.low,
+                self.action_space.high
+            )
 
         # Apply action
         self._state += action
