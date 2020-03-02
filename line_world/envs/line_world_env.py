@@ -41,7 +41,7 @@ class LineWorldEnv(gym.Env):
             warnings.warn("sum(mode_weights) != 1.0, normalizing")
             mode_weights = np.array(mode_weights) / sum(mode_weights)
 
-        self._starting_state_distribution = norm()
+        self._starting_state_distribution = norm(scale=8.0)
         self._stochastic = stochastic
         self._dynamics_noise_distribution = (
             norm(0.0, 0.2 * float(stochastic))
