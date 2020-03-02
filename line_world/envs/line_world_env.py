@@ -332,6 +332,12 @@ class LineWorldEnv(gym.Env):
         plt.ylabel("Action")
         plt.show()
 
+    def _sample_expert(self, num_paths):
+        """Sample state-action trajectories from the optimal policy"""
+
+        assert self._episode_length is not None,\
+            "Environment must be episodic to sample trajectories"
+
 
 def stable_baselines_demo(
         *,
