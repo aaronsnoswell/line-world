@@ -342,8 +342,8 @@ class LineWorldEnv(gym.Env):
 def stable_baselines_demo(
         *,
         save_path="PPO2_LineWorld",
-        n_envs=8,
-        total_timesteps=100000,
+        n_envs=16,
+        total_timesteps=2000000,
         **kwargs
     ):
     """Train an agent using stable_baselines
